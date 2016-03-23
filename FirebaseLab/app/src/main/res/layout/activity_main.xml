@@ -9,8 +9,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jafoole.firebaselab.MainActivity">
 
-    <TextView
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chatEditText" />
+
+    <EditText
+        android:id="@+id/chatEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/sendButton"
+        android:layout_toStartOf="@+id/sendButton" />
+
+    <Button
+        android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/listView"
+        android:layout_alignEnd="@+id/listView"
+        android:text="SEND"/>
+
 </RelativeLayout>

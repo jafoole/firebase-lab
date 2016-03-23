@@ -2,9 +2,11 @@ package com.example.jafoole.firebaselab;
 
 import android.app.Application;
 
+import com.firebase.client.Firebase;
+
 /**
  * Created by
- * /\     /\      __        _____              __                /\      /\
+ *  /\     /\      __        _____              __                /\      /\
  * \ \    \ \     |__|____ _/ ____\____   ____ |  |   ____       / /     / /
  * \ \    \ \     |  \__  \\   __\/  _ \ /  _ \|  | _/ __ \     / /     / /
  * \ \    \ \     |  |/ __ \|  | (  <_> |  <_> )  |_\  ___/    / /     / /
@@ -17,6 +19,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Firebase.setAndroidContext(this);
 
     }
 }
